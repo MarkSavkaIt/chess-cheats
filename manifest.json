@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Chess Cheats",
+    "description": "Chess Cheats 1.0",
+    "version": "1.0",
+    "author": "Mark Savka",
+    "browser_action": {
+        "default_icon": "chess.png",
+        "default_title": "Chess Cheats 1.1",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "main.js",
+                "services/changeTheme.js"
+            ]
+        }
+    ]
+}

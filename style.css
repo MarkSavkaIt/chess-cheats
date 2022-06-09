@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	--theme-dark: #3a3a3a;
+	--theme-light: #f0f0f0;
+}
+
+body {
+	padding: 4em 1em 1em;
+	min-width: 250px;
+}
+
+body[data-theme=dark] {
+	background-color: var(--theme-dark);
+	color: var(--theme-light);
+}
+
+body[data-theme=light] {
+	background-color: var(--theme-light);
+	color: var(--theme-dark);
+}
+
+button {
+	border: 2px solid;
+	border-radius: .3em;
+	padding: .5em 1em;
+	cursor: pointer;
+}
+
+body[data-theme=dark] button {
+	border-color: var(--theme-light);
+	background-color: var(--theme-dark);
+	color: var(--theme-light);
+}
+
+body[data-theme=light] button {
+	border-color: var(--theme-dark);
+	background-color: var(--theme-light);
+	color: var(--theme-dark);
+}
+
+.theme {
+	position: fixed;
+	right: 1em;
+	top: 1em;
+}
+
+p {
+	font-size: 1.2em;
+}
